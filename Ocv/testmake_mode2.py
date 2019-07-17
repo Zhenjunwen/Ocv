@@ -155,15 +155,15 @@ class OvcAutoMake:
                         "batch_no": self.batch_no}
         self.__generatesignature(params=self.progressdata)
         self.progresstime = ""
-        for i in range(9999):
+        for i in range(3000):
             progressequest = self.s.post(self.progressurl, data=self.progressdata)
             progressdict = json.loads(progressequest.text)
+            print(progressdict)
             if progressdict["data"]["list"] != []:
                 if self.progresstime == "":
                     self.progresstime = datetime.datetime.now()
                 print(str(progressdict["data"]["list"][0]["progress"]))
             else:
-
                 print(".", end='')
                 print('')
             if progressdict["data"]["end"] == 1:

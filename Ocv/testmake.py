@@ -151,7 +151,7 @@ class OvcAutoMake:
         for i in range(300):
             progressequest = self.s.post(self.progressurl, data=self.progressdata)
             progressdict = json.loads(progressequest.text)
-            #print(progressdict)
+            print(progressdict)
             if progressdict["data"]["list"] != []:
                 if self.progresstime == "":
                     self.progresstime = datetime.datetime.now()

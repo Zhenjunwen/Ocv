@@ -8,7 +8,7 @@ if __name__ == '__main__':
         "picnum": "5p",
         "makedata": {
             "entrance": 2,
-            "industry": 2403,#通用是1，服装是2403
+            "industry": 1,#通用是1，服装是2403
             "duration": 15,
             "proportion": "9:16",
             "lens_type":1,
